@@ -22,7 +22,7 @@ public class Main {
                     if(cmd.equals(toCmpr)) valid = true;
                 }
                 if(valid) out.println(toCmpr + " is a shell builtin");
-                else out.println(toCmpr + ": command not found");
+                else out.println(toCmpr + ": not found");
             } else {
                 out.println(input + ": command not found");
             }
