@@ -11,7 +11,8 @@ public class Main {
             String input = scanner.next();
             if(input.equals("exit 0")) break;
             else if (input.equals("echo")) {
-                out.println(scanner.nextLine());
+                String output = scanner.nextLine();
+                out.println(output.substring(1,output.length()) + "\n");
             } else {
                 out.println(input + ": command not found");
             }
