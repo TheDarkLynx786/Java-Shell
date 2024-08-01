@@ -17,9 +17,9 @@ public class Main {
             String input = scanner.nextLine();
             //Checker Code
             if(input.equals(cmds[0] + " 0")) break;   //Exit
-            else if (input.substring(0,4).equals(cmds[1])) {   //Echo Builtin
+            else if (input.split(" ")[0].equals(cmds[1])) {   //Echo Builtin
                 out.print(input.substring(5, input.length()) + "\n");
-            } else if (input.substring(0,4).equals(cmds[2])){   //Type Builtin
+            } else if (input.split(" ")[0].equals(cmds[2])){   //Type Builtin
                 
                 String toCmpr = input.substring(5, input.length());
                 boolean valid = false;
