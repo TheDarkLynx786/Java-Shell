@@ -38,7 +38,17 @@ public class Main {
 
 
             } else {
-                out.println(input + ": command not found");
+                String[] inpln = input.split(" ");
+                String cmd = inpln[0];
+
+                String path = Pathfinder(cmd);
+
+                if("".equals(path)) out.println(cmd + ": command not found");
+                else {
+                    String extdPath = path + " " + inpln[1];
+                    Process exec = Runtime.getRuntime().exec(extdPath.split(" "));
+                    exec.getInputStream().transferTo(out);
+                }
             }
 
             out.print("$ ");
